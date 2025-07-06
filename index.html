@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Inpainting using Discrete Diffusion Model (AIDD)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background: #fafafa;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .centered-paragraph {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .fig-model {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .fig-model img {
+      max-width: 90%;
+      height: auto;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #eee;
+    }
+
+    audio {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Audio Inpainting using Discrete Diffusion Model (AIDD)</h1>
+
+  <div class="abs centered-paragraph">
+    <p>
+      We introduce AIDD, a novel approach for audio inpainting that applies discrete diffusion modeling over tokenized
+      representations of audio. Using a pretrained WavTokenizer and a discrete diffusion model, AIDD reconstructs
+      missing audio segments with high perceptual fidelity. Our method operates in token space to capture semantic
+      structures more effectively and demonstrates superior results on long audio gaps compared to existing methods.
+    </p>
+  </div>
+
+  <h2>Model Overview</h2>
+  <div class="fig-model">
+    <img src="figures/our_arch.png" alt="Architecture of AIDD">
+  </div>
+
+  <h2>Audio Inpainting Samples</h2>
+  <p class="centered-paragraph"><strong>Use headphones for best experience.</strong></p>
+  <p class="centered-paragraph">
+    Each row compares the original corrupted input, our inpainted result, and outputs from baseline models like
+    CQT-Diff+ and MAID. Gaps range from 100–300ms.
+  </p>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Masked Audio</th>
+          <th>AIDD (Ours)</th>
+          <th>CQT-Diff+</th>
+          <th>MAID</th>
+          <th>LPC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><audio controls><source src="samples/music1_masked.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/music1_aidd.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/music1_cqt.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/music1_maid.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/music1_lpc.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td><audio controls><source src="samples/music2_masked.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/music2_aidd.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/music2_cqt.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/music2_maid.wav" type="audio/wav"></audio></td>
+          <td><audio controls><source src="samples/music2_lpc.wav" type="audio/wav"></audio></td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Conclusion</h2>
+  <div class="centered-paragraph">
+    <p>
+      AIDD demonstrates strong capability in reconstructing large audio gaps by modeling over token space with discrete
+      diffusion. Our evaluations on the MusicNet dataset show superior performance in both perceptual and spectral
+      metrics, especially in longer gaps.
+    </p>
+  </div>
+
+</body>
+</html>
