@@ -51,10 +51,19 @@
     th, td {
       padding: 10px;
       text-align: center;
+      vertical-align: middle;
     }
 
     th {
       background-color: #eee;
+    }
+
+    .gap-header {
+      background-color: #ddd;
+      font-weight: bold;
+      text-align: center;
+      padding: 12px;
+      font-size: 1.2em;
     }
 
     audio {
@@ -84,12 +93,13 @@
   <h2>MusicNet Inpainting Results</h2>
   <p class="centered-paragraph"><strong>Use headphones for best experience.</strong></p>
 
-  <!-- GAP-SPECIFIC TABLES -->
   <div class="table-container">
+
+    <!-- 50ms -->
+    <div class="gap-header">Gap: 50ms</div>
     <table>
       <thead>
         <tr>
-          <th>Gap: 50ms</th>
           <th>Original</th>
           <th>Masked</th>
           <th>Generated</th>
@@ -97,25 +107,21 @@
       </thead>
       <tbody>
         <tr>
-          <td>1819_seg5</td>
           <td><audio controls src="examples MusicNet/original/1819_seg5.wav"></audio></td>
           <td><audio controls src="examples MusicNet/50ms/masked/1819_seg5_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/50ms/generated/1819_seg5_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2106_seg2</td>
           <td><audio controls src="examples MusicNet/original/2106_seg2.wav"></audio></td>
           <td><audio controls src="examples MusicNet/50ms/masked/2106_seg2_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/50ms/generated/2106_seg2_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2303_seg6</td>
           <td><audio controls src="examples MusicNet/original/2303_seg6.wav"></audio></td>
           <td><audio controls src="examples MusicNet/50ms/masked/2303_seg6_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/50ms/generated/2303_seg6_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2382_seg3</td>
           <td><audio controls src="examples MusicNet/original/2382_seg3.wav"></audio></td>
           <td><audio controls src="examples MusicNet/50ms/masked/2382_seg3_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/50ms/generated/2382_seg3_masked_gen0.wav"></audio></td>
@@ -123,11 +129,11 @@
       </tbody>
     </table>
 
-    <!-- Repeat for 100ms, 200ms, 300ms -->
+    <!-- 100ms -->
+    <div class="gap-header">Gap: 100ms</div>
     <table>
       <thead>
         <tr>
-          <th>Gap: 100ms</th>
           <th>Original</th>
           <th>Masked</th>
           <th>Generated</th>
@@ -135,25 +141,21 @@
       </thead>
       <tbody>
         <tr>
-          <td>1819_seg5</td>
           <td><audio controls src="examples MusicNet/original/1819_seg5.wav"></audio></td>
           <td><audio controls src="examples MusicNet/100ms/masked/1819_seg5_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/100ms/generated/1819_seg5_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2106_seg2</td>
           <td><audio controls src="examples MusicNet/original/2106_seg2.wav"></audio></td>
           <td><audio controls src="examples MusicNet/100ms/masked/2106_seg2_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/100ms/generated/2106_seg2_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2303_seg6</td>
           <td><audio controls src="examples MusicNet/original/2303_seg6.wav"></audio></td>
           <td><audio controls src="examples MusicNet/100ms/masked/2303_seg6_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/100ms/generated/2303_seg6_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2382_seg3</td>
           <td><audio controls src="examples MusicNet/original/2382_seg3.wav"></audio></td>
           <td><audio controls src="examples MusicNet/100ms/masked/2382_seg3_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/100ms/generated/2382_seg3_masked_gen0.wav"></audio></td>
@@ -161,10 +163,11 @@
       </tbody>
     </table>
 
+    <!-- 200ms -->
+    <div class="gap-header">Gap: 200ms</div>
     <table>
       <thead>
         <tr>
-          <th>Gap: 200ms</th>
           <th>Original</th>
           <th>Masked</th>
           <th>Generated</th>
@@ -172,25 +175,21 @@
       </thead>
       <tbody>
         <tr>
-          <td>1819_seg5</td>
           <td><audio controls src="examples MusicNet/original/1819_seg5.wav"></audio></td>
           <td><audio controls src="examples MusicNet/200ms/masked/1819_seg5_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/200ms/generated/1819_seg5_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2106_seg2</td>
           <td><audio controls src="examples MusicNet/original/2106_seg2.wav"></audio></td>
           <td><audio controls src="examples MusicNet/200ms/masked/2106_seg2_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/200ms/generated/2106_seg2_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2303_seg6</td>
           <td><audio controls src="examples MusicNet/original/2303_seg6.wav"></audio></td>
           <td><audio controls src="examples MusicNet/200ms/masked/2303_seg6_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/200ms/generated/2303_seg6_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2382_seg3</td>
           <td><audio controls src="examples MusicNet/original/2382_seg3.wav"></audio></td>
           <td><audio controls src="examples MusicNet/200ms/masked/2382_seg3_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/200ms/generated/2382_seg3_masked_gen0.wav"></audio></td>
@@ -198,10 +197,11 @@
       </tbody>
     </table>
 
+    <!-- 300ms -->
+    <div class="gap-header">Gap: 300ms</div>
     <table>
       <thead>
         <tr>
-          <th>Gap: 300ms</th>
           <th>Original</th>
           <th>Masked</th>
           <th>Generated</th>
@@ -209,25 +209,21 @@
       </thead>
       <tbody>
         <tr>
-          <td>1819_seg5</td>
           <td><audio controls src="examples MusicNet/original/1819_seg5.wav"></audio></td>
           <td><audio controls src="examples MusicNet/300ms/masked/1819_seg5_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/300ms/generated/1819_seg5_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2106_seg2</td>
           <td><audio controls src="examples MusicNet/original/2106_seg2.wav"></audio></td>
           <td><audio controls src="examples MusicNet/300ms/masked/2106_seg2_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/300ms/generated/2106_seg2_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2303_seg6</td>
           <td><audio controls src="examples MusicNet/original/2303_seg6.wav"></audio></td>
           <td><audio controls src="examples MusicNet/300ms/masked/2303_seg6_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/300ms/generated/2303_seg6_masked_gen0.wav"></audio></td>
         </tr>
         <tr>
-          <td>2382_seg3</td>
           <td><audio controls src="examples MusicNet/original/2382_seg3.wav"></audio></td>
           <td><audio controls src="examples MusicNet/300ms/masked/2382_seg3_masked.wav"></audio></td>
           <td><audio controls src="examples MusicNet/300ms/generated/2382_seg3_masked_gen0.wav"></audio></td>
